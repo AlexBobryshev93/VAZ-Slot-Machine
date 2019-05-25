@@ -51,13 +51,7 @@ class VAZ implements ActionListener {
 	public void actionPerformed(ActionEvent ae) {
 		Game.play();
 		//animate();
-		/*
-		try {
-			Thread.sleep(200);
-		} catch (InterruptedException exc) {
-			return;
-		}
-		*/
+
 		lab1.setIcon(images[Game.getSlot(0)]);
 		lab2.setIcon(images[Game.getSlot(1)]);
 		lab3.setIcon(images[Game.getSlot(2)]);
@@ -71,6 +65,8 @@ class VAZ implements ActionListener {
 		}
 		res.setText(Game.getResult());
 	}
+
+//Should be used in a separate thread 	
 /*
 	public void animate() {
 		for (int i = 0; i < images.length; i++) {
@@ -94,6 +90,7 @@ class VAZ implements ActionListener {
 		}
 	}
 */	
+
 	public static void main(String[] args) {
 		SwingUtilities.invokeLater(new Runnable() {
 			public void run() {
