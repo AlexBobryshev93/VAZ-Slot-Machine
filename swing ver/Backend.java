@@ -14,7 +14,7 @@ class Backend {
 		Slots[2] = (int) (Math.random() * 6);
 	}
 	
-	void checkwin() {
+	void checkWin() {
 		if ((Slots[0] == Slots [1]) && (Slots[1] == Slots[2])) {
 			win = (1 + Slots[0]) * 5;
 			result = "Jackpot! You win " + win + " credits!!!";
@@ -42,7 +42,7 @@ class Backend {
 		return true;
 	}
 	
-	void gameover() {
+	void gameOver() {
 		result = "Game Over";
 	}
 	

@@ -51,22 +51,23 @@ class VAZ implements ActionListener {
 	public void actionPerformed(ActionEvent ae) {
 		Game.play();
 		//animate();
+		/*
 		try {
 			Thread.sleep(200);
 		} catch (InterruptedException exc) {
 			return;
 		}
-		
+		*/
 		lab1.setIcon(images[Game.getSlot(0)]);
 		lab2.setIcon(images[Game.getSlot(1)]);
 		lab3.setIcon(images[Game.getSlot(2)]);
 		
-		Game.checkwin();
+		Game.checkWin();
 		trn.setText("Turns: " + Game.getTurns());
 		cred.setText("Credits: " + Game.getCredits());
 		if (!Game.check()) {
 			btn.removeActionListener(this);
-			Game.gameover();
+			Game.gameOver();
 		}
 		res.setText(Game.getResult());
 	}
